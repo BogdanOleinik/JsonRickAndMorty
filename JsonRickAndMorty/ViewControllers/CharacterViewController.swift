@@ -10,7 +10,6 @@ import UIKit
 class CharacterViewController: UITableViewController {
 
     //MARK: Private properties
-    
     private var rickAndMorty: RickAndMorty?
     private let searchController = UISearchController(searchResultsController: nil)
     private var filteredCharacter: [Character] = []
@@ -23,7 +22,6 @@ class CharacterViewController: UITableViewController {
     }
     
     // MARK: - UIViewController Methods
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.rowHeight = 70
@@ -36,7 +34,6 @@ class CharacterViewController: UITableViewController {
     }
 
     // MARK: - Table view data source
-    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         isFiltering ? filteredCharacter.count : rickAndMorty?.results.count ?? 0
     }
@@ -50,7 +47,6 @@ class CharacterViewController: UITableViewController {
         return cell
     }
     // MARK: - Navigation
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let indexPath = tableView.indexPathForSelectedRow else { return }
         let character = isFiltering ? filteredCharacter[indexPath.row] : rickAndMorty?.results[indexPath.row]

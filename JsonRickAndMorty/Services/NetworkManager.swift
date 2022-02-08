@@ -62,6 +62,7 @@ class NetworkManager {
 }
 
 class ImageManager {
+    
     static var shared = ImageManager()
     
     private init() {}

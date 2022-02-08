@@ -10,7 +10,6 @@ import UIKit
 class CharterDetailsViewController: UIViewController {
 
     // MARK: - IBOutlets
-
     @IBOutlet var characterImageView: CharacterImageView! {
         didSet {
             characterImageView.layer.cornerRadius = characterImageView.frame.width / 2
@@ -18,13 +17,11 @@ class CharterDetailsViewController: UIViewController {
     }
     
     // MARK: - Public properties
-    
     var character: Character!
     
     private var spinnerView = UIActivityIndicatorView()
         
     // MARK: - UIViewController Methods
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         if let topItem = navigationController?.navigationBar.topItem {

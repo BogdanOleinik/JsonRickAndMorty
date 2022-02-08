@@ -20,7 +20,6 @@ class TableViewCell: UITableViewCell {
     }
     
     // MARK: - Public methods
-    
     func configure(with character: Character?) {
         nameLabel.text = character?.name
         characterImageView.fetchImage(from: character?.image ?? "")
